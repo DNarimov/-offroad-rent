@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /assets/tracks/
+
+User-agent: Yandex
+Allow: /
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&yclid&gclid&fbclid
+
+Sitemap: https://offroad-rent.uz/sitemap.xml
+Host: https://offroad-rent.uz

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://offroad-rent.uz/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://offroad-rent.uz/assets/img/fleet/hero-trailblazer.jpg</image:loc>
+      <image:title>Аренда внедорожника Chevrolet Trailblazer 4x4 в Ташкенте</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://offroad-rent.uz/assets/img/fleet/jac-t8.jpg</image:loc>
+      <image:title>Аренда пикапа JAC T8 4x4 для оффроад-туров</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://offroad-rent.uz/assets/img/routes/aral-ship-cemetery.jpg</image:loc>
+      <image:title>Тур на Аральское море: кладбище кораблей в Муйнаке</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://offroad-rent.uz/assets/img/routes/aral-fleet-ships.jpg</image:loc>
+      <image:title>Оффроад-тур на Арал на внедорожниках Chevrolet Trailblazer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://offroad-rent.uz/assets/img/routes/aral-sudochye-1.jpg</image:loc>
+      <image:title>Тур на Аральское море: озеро Судочье</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://offroad-rent.uz/assets/img/routes/mountains-paltau-1.jpg</image:loc>
+      <image:title>Водопад Пальтау — горы Узбекистана</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://offroad-rent.uz/assets/img/routes/mountains-chimgan.jpg</image:loc>
+      <image:title>Чимган и Чарвак — туры по горам Узбекистана на внедорожнике</image:title>
+    </image:image>
+  </url>
+</urlset>
