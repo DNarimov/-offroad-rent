@@ -2464,6 +2464,79 @@ body.scroll-locked {
   .fleet-bonus { font-size: 11.8px; padding: 10px 12px; margin-bottom: 14px; }
 }
 
+/* ============================================================
+   СКИДКИ ЗА ДЛИТЕЛЬНУЮ АРЕНДУ
+   ============================================================ */
+.discounts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 14px;
+  padding: 22px 26px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(600px 220px at 96% 50%, rgba(212, 175, 55, .10), transparent 70%),
+    var(--bg-card);
+}
+.discounts-head { display: flex; flex-direction: column; gap: 6px; }
+.discounts-eyebrow {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.discounts-head strong {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -.1px;
+}
+.discounts-grid { display: flex; gap: 10px; flex-wrap: wrap; }
+.discount-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-width: 118px;
+  padding: 13px 18px;
+  border-radius: 14px;
+  border: 1px solid var(--border-soft);
+  background: rgba(10, 10, 11, .4);
+  transition: border-color .25s ease, transform .25s ease;
+}
+.discount-card:hover { border-color: rgba(255, 138, 0, .4); transform: translateY(-2px); }
+.discount-card-best {
+  border-color: rgba(255, 138, 0, .45);
+  background: var(--accent-soft);
+}
+.discount-val {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--accent);
+  line-height: 1;
+}
+.discount-card-best .discount-val { color: var(--accent-hover); }
+.discount-term {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .discounts { padding: 16px; gap: 14px; margin-top: 10px; }
+  .discounts-head strong { font-size: 15px; }
+  .discounts-grid { width: 100%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .discount-card { min-width: 0; padding: 11px 6px; border-radius: 11px; }
+  .discount-val { font-size: 19px; }
+  .discount-term { font-size: 9.5px; letter-spacing: .04em; }
+}
+
 </style>
 
 <script type="application/ld+json">
@@ -2842,6 +2915,26 @@ body.scroll-locked {
       <span class="bonus-strip-desc" data-i18n="bonus_desc">Дополнительный объём багажа для снаряжения, палаток и канистр. Устанавливаем перед выдачей, оплачивать отдельно не нужно.</span>
     </div>
   </div>
+  <div class="discounts reveal">
+    <div class="discounts-head">
+      <span class="discounts-eyebrow" data-i18n="disc_eyebrow">Скидки за длительную аренду</span>
+      <strong data-i18n="disc_title">Чем дольше аренда, тем ниже цена за сутки</strong>
+    </div>
+    <div class="discounts-grid">
+      <div class="discount-card">
+        <span class="discount-val">−12%</span>
+        <span class="discount-term" data-i18n="disc_3">от 3 дней</span>
+      </div>
+      <div class="discount-card">
+        <span class="discount-val">−17%</span>
+        <span class="discount-term" data-i18n="disc_7">от 7 дней</span>
+      </div>
+      <div class="discount-card discount-card-best">
+        <span class="discount-val">−29%</span>
+        <span class="discount-term" data-i18n="disc_30">от 30 дней</span>
+      </div>
+    </div>
+  </div>
 </div>
 
 <section id="fleet">
@@ -3200,6 +3293,76 @@ body.scroll-locked {
           <div class="fleet-card-actions">
             <button class="btn btn-primary" onclick="openBookingModal('JAC T8 PICKUP')" data-i18n="btn_order">Заказать</button>
             <button class="btn btn-ghost" onclick="openCarModal('jact8')" data-i18n="btn_more">Подробнее</button>
+          </div>
+        </div>
+      </article>
+<article class="fleet-card reveal reveal-delay-2">
+        <div class="fleet-card-img">
+          <span class="fleet-tag" data-i18n="fleet_6_tag">Кроссовер</span>
+          <img src="assets/img/fleet/tracker.jpg" alt="Chevrolet Tracker 2 Premier — аренда кроссовера в Ташкенте" width="729" height="499" loading="lazy" decoding="async">
+        </div>
+        <div class="fleet-card-body">
+          <div class="fleet-card-head">
+            <div>
+              <h3 class="fleet-card-title" data-i18n="fleet_6_title">CHEVROLET TRACKER 2</h3>
+              <small data-i18n="fleet_6_sub">КРОССОВЕР · PREMIER</small>
+            </div>
+            <div class="fleet-card-price">
+              <div class="fleet-card-price-from" data-i18n="price_from">от</div>
+              <div class="fleet-card-price-val">500 000<small data-i18n="price_unit">сум/день</small></div>
+            </div>
+          </div>
+          <div class="fleet-features">
+            <div class="feature">
+              <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V5a2 2 0 0 1 2-2h11l5 5v13"/><path d="M16 3v5h5"/><circle cx="9" cy="13" r="1" fill="currentColor"/></svg></div>
+              <div class="feature-text">
+                <span>Двери</span>
+                <strong>5</strong>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V11a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v10"/><path d="M3 21h18"/><path d="M5 14h14"/></svg></div>
+              <div class="feature-text">
+                <span>Мест</span>
+                <strong>5</strong>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><line x1="6" y1="9" x2="6" y2="15"/><line x1="18" y1="9" x2="18" y2="15"/><line x1="6" y1="15" x2="12" y2="15"/><line x1="18" y1="15" x2="12" y2="15"/></svg></div>
+              <div class="feature-text">
+                <span>Коробка</span>
+                <strong>Автомат</strong>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></div>
+              <div class="feature-text">
+                <span>Кондиционер</span>
+                <strong>Да</strong>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div class="feature-text">
+                <span>Страховка</span>
+                <strong>KASKO+OSAGO</strong>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="15" y2="22"/><line x1="4" y1="9" x2="14" y2="9"/><path d="M14 22V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v18"/><path d="M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2 2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.42L18 5"/></svg></div>
+              <div class="feature-text">
+                <span>Топливо</span>
+                <strong>Бензин + Пропан</strong>
+              </div>
+            </div>
+          </div>
+          <div class="fleet-bonus">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="7" rx="2.5"/><path d="M7 9V7.5A1.5 1.5 0 0 1 8.5 6h7A1.5 1.5 0 0 1 17 7.5V9"/><path d="M6 19h2M16 19h2"/></svg>
+            <span data-i18n="fleet_bonus">Бонусом — аэродинамический бокс на крышу</span>
+          </div>
+          <div class="fleet-card-actions">
+            <button class="btn btn-primary" onclick="openBookingModal('CHEVROLET TRACKER 2')" data-i18n="btn_order">Заказать</button>
+            <button class="btn btn-ghost" onclick="openCarModal('tracker')" data-i18n="btn_more">Подробнее</button>
           </div>
         </div>
       </article>
@@ -3875,6 +4038,107 @@ body.scroll-locked {
     </div>
   </div>
 </div>
+<div class="modal-backdrop car-modal" id="carModal_tracker">
+  <div class="modal modal-car">
+    <button class="modal-close" onclick="closeCarModal('tracker')" aria-label="Close">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="modal-car-img">
+      <span class="modal-car-img-tag">Кроссовер</span>
+      <img src="assets/img/fleet/tracker.jpg" alt="Chevrolet Tracker 2 Premier — аренда кроссовера в Ташкенте" width="729" height="499" loading="lazy" decoding="async">
+    </div>
+    <div class="modal-car-body">
+      <div class="modal-car-head">
+        <div>
+          <h3 class="modal-car-title">CHEVROLET TRACKER 2<small>КРОССОВЕР · PREMIER</small></h3>
+        </div>
+        <div class="modal-car-price">
+          <div class="modal-car-price-from" data-i18n="price_from">от</div>
+          <div class="modal-car-price-val">500 000<small data-i18n="price_unit">сум/день</small></div>
+        </div>
+      </div>
+      <p class="modal-car-desc">Городской кроссовер в топовой комплектации Premier: автоматическая коробка, климат-контроль, камера заднего вида и мультимедиа. Газобаллонное оборудование заметно снижает расход на трассе. Удобный и экономичный выбор для поездок по городу, командировок и путешествий по асфальтовым маршрутам Узбекистана.</p>
+      <div class="modal-car-features">
+        <div class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V5a2 2 0 0 1 2-2h11l5 5v13"/><path d="M16 3v5h5"/><circle cx="9" cy="13" r="1" fill="currentColor"/></svg></div>
+          <div class="feature-text">
+            <span>Двери</span>
+            <strong>5</strong>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V11a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v10"/><path d="M3 21h18"/><path d="M5 14h14"/></svg></div>
+          <div class="feature-text">
+            <span>Мест</span>
+            <strong>5</strong>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><line x1="6" y1="9" x2="6" y2="15"/><line x1="18" y1="9" x2="18" y2="15"/><line x1="6" y1="15" x2="12" y2="15"/><line x1="18" y1="15" x2="12" y2="15"/></svg></div>
+          <div class="feature-text">
+            <span>Коробка</span>
+            <strong>Автомат</strong>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></div>
+          <div class="feature-text">
+            <span>Кондиционер</span>
+            <strong>Да</strong>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="feature-text">
+            <span>Страховка</span>
+            <strong>KASKO+OSAGO</strong>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="15" y2="22"/><line x1="4" y1="9" x2="14" y2="9"/><path d="M14 22V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v18"/><path d="M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2 2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.42L18 5"/></svg></div>
+          <div class="feature-text">
+            <span>Топливо</span>
+            <strong>Бензин + Пропан</strong>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <div class="feature-text">
+            <span>Возраст водителя</span>
+            <strong>23+ лет</strong>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="8" width="12" height="13" rx="2"/><path d="M9 8V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v3"/><line x1="9" y1="13" x2="15" y2="13"/></svg></div>
+          <div class="feature-text">
+            <span>Багаж</span>
+            <strong>350 л</strong>
+          </div>
+        </div>
+      </div>
+      <div class="modal-car-included">
+        <div class="modal-car-included-title">Что входит в аренду</div>
+        <ul>
+          <li><b>Аэродинамический бокс на крышу — бонусом к любому автомобилю</b></li>
+          <li>Полный бак при выдаче автомобиля</li>
+          <li>Страхование KASKO + OSAGO без франшизы по вине третьих лиц</li>
+          <li>Доставка по Ташкенту 24/7 — аэропорт, вокзал, отель или офис</li>
+          <li>Техническая поддержка на маршруте и помощь на линии</li>
+          <li>Детское кресло и навигация — по запросу</li>
+        </ul>
+        <div class="modal-car-terms">
+          <span><b>Залог</b> обсуждается индивидуально</span>
+          <span><b>Минимальный срок</b> аренды — 1 сутки</span>
+          <span><b>Выезд за границу</b> — по доверенности</span>
+        </div>
+      </div>
+      <div class="modal-car-actions">
+        <button class="btn btn-primary btn-lg" onclick="closeCarModal('tracker'); openBookingModal('CHEVROLET TRACKER 2')" data-i18n="btn_book_modal">Забронировать</button>
+        <a href="https://t.me/Rinat_Ruzmamatov?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82+LADA+NIVA" target="_blank" class="btn btn-ghost btn-lg">Telegram</a>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="modal-backdrop car-modal" id="carModal_jact8">
   <div class="modal modal-car">
     <button class="modal-close" onclick="closeCarModal('jact8')" aria-label="Close">
@@ -4003,6 +4267,7 @@ body.scroll-locked {
           <option value="Chevrolet Malibu 2">Chevrolet Malibu 2</option>
           <option value="Lada Niva">Lada Niva</option>
           <option value="JAC T8 Pickup">JAC T8 Pickup</option>
+          <option value="Chevrolet Tracker 2">Chevrolet Tracker 2</option>
         </select>
       </div>
       <div class="field">
@@ -4024,6 +4289,14 @@ body.scroll-locked {
 const translations = {
   ru: {
     nav_faq: "Вопросы",
+    fleet_6_title: "CHEVROLET TRACKER 2",
+    fleet_6_sub: "КРОССОВЕР · PREMIER",
+    fleet_6_tag: "Кроссовер",
+    disc_eyebrow: "Скидки за длительную аренду",
+    disc_title: "Чем дольше аренда, тем ниже цена за сутки",
+    disc_3: "от 3 дней",
+    disc_7: "от 7 дней",
+    disc_30: "от 30 дней",
     fleet_bonus: "Бонусом — аэродинамический бокс на крышу",
     bonus_eyebrow: "Бонус ко всем автомобилям",
     bonus_title: "Аэродинамический бокс на крышу — бесплатно",
@@ -4186,6 +4459,14 @@ const translations = {
 
   uz: {
     nav_faq: "Savollar",
+    fleet_6_title: "CHEVROLET TRACKER 2",
+    fleet_6_sub: "KROSSOVER · PREMIER",
+    fleet_6_tag: "Krossover",
+    disc_eyebrow: "Uzoq muddatli ijara chegirmalari",
+    disc_title: "Ijara qancha uzoq bo‘lsa, kunlik narx shuncha past",
+    disc_3: "3 kundan",
+    disc_7: "7 kundan",
+    disc_30: "30 kundan",
     fleet_bonus: "Bonus — tomga aerodinamik boks",
     bonus_eyebrow: "Barcha avtomobillarga bonus",
     bonus_title: "Tomga aerodinamik boks — bepul",
@@ -4348,6 +4629,14 @@ const translations = {
 
   en: {
     nav_faq: "FAQ",
+    fleet_6_title: "CHEVROLET TRACKER 2",
+    fleet_6_sub: "CROSSOVER · PREMIER",
+    fleet_6_tag: "Crossover",
+    disc_eyebrow: "Long-term rental discounts",
+    disc_title: "The longer the rental, the lower the daily rate",
+    disc_3: "from 3 days",
+    disc_7: "from 7 days",
+    disc_30: "from 30 days",
     fleet_bonus: "Bonus — aerodynamic roof box included",
     bonus_eyebrow: "Included with every car",
     bonus_title: "An aerodynamic roof box — free of charge",
